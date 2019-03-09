@@ -20,7 +20,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "build-container": "docker build -t fab/ui-spa .",
+    "run-container": "docker run -p 3000:3000 fab/ui-spa"
   },
   "eslintConfig": {
     "extends": "react-app"
