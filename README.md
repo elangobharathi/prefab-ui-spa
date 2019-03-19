@@ -1,5 +1,10 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Notes
+
+- This app assumes that there is a service endpoint running on [localhost:8080](http://localhost:8080).
+- Since the app can't make direct calls into this endpoint, there is a proxy setup in `package.json`.
+
 ## Available Scripts
 
 In the project directory, you can run:

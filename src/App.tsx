@@ -19,6 +19,17 @@ import WorkIcon from '@material-ui/icons/Work';
 import BeachAccessIcon from '@material-ui/icons/BeachAccess';
 
 class App extends Component {
+  constructor(props: any) {
+    super(props);
+    console.log(process.env);
+    App.fetchGreeting();
+  }
+
+  private static async fetchGreeting() {
+    const response = await fetch('/greet?name=user').then(response => response.json());
+    console.log(response);
+  }
+
   render() {
     return (
       <BrowserRouter>
@@ -49,7 +60,7 @@ export default App;
 function HomePage() {
   return (
     <NavLink to={'/listing'}>
-      <Button variant={'raised'}>Go to Listing</Button>
+      <Button variant={'contained'}>Go to Listing</Button>
     </NavLink>
   );
 }
@@ -89,7 +100,7 @@ function DetailsPage() {
       </CardContent>
       <CardActions>
         <NavLink to={'/listing'}>
-          <Button variant={'raised'} color={'primary'}>
+          <Button variant={'contained'} color={'primary'}>
             Go back
           </Button>
         </NavLink>
