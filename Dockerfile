@@ -9,4 +9,4 @@ EXPOSE 3000
 
 COPY build/ ./
 
-CMD ["serve", "--listen", "3000"]
+CMD ["serve", "--single", "--listen", "3000"]

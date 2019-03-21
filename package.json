@@ -15,8 +15,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "build-container": "npm run build && docker image build -t fab/react-spa .",
-    "run-container": "docker container run -p 3000:3000 -v $PWD:/www/app fab/react-spa"
+    "build-container": "npm run build && docker image build -t ps/react-spa .",
+    "run-container": "docker container run -p 3000:3000 ps/react-spa"
   },
   "eslintConfig": {
     "extends": "react-app"
