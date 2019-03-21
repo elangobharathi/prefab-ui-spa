@@ -3,6 +3,10 @@ FROM node:11-alpine
 RUN mkdir -p /www/app
 WORKDIR /www/app
 
+RUN npm install -g serve
+
 EXPOSE 3000
 
-CMD ["npm","start"]
+COPY build/ ./
+
+CMD ["serve", "--listen", "3000"]
